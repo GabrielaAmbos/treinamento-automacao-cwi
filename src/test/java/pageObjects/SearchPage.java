@@ -25,4 +25,13 @@ public class SearchPage extends SearchPageElementMapper {
     public boolean isSearchPage() {
         return getTextPageNavigation().equals("Search");
     }
+
+    public String getTextNameItem() {
+        return nameItem.getText();
+    }
+
+    public void clickBtnAddToCart() {
+        addToCart.click();
+    }
+
 }

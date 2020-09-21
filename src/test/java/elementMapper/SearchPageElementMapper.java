@@ -13,4 +13,12 @@ public class SearchPageElementMapper {
 
     @FindBy(className = "heading-counter")
     public WebElement resultNumber;
+
+    @FindBy(xpath = "//*[@itemprop='name']")
+    public WebElement nameItem;
+
+    @FindBy(xpath = "//*[@title='Add to cart']")
+    public WebElement addToCart;
+
+
 }

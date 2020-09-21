@@ -4,6 +4,7 @@ import org.hamcrest.CoreMatchers;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import pageObjects.HomePage;
+import pageObjects.ProductPage;
 import pageObjects.SearchPage;
 import utils.Browser;
 import utils.Utils;
@@ -40,9 +41,28 @@ public class SetupTest extends BaseTests{
 
         home.doSearch(quest);
         assertTrue(searchPage.isSearchPage());
-        //assertEquals(searchPage.getTextSearchResult(), quest);
         assertEquals(quest, searchPage.getTextSearchResult());
         assertThat(searchPage.getTextResultNumber(), CoreMatchers.containsString(resultQts));
+    }
+
+    @Test
+    public void testSearchAndViewItem() {
+        String quest = "Blouse";
+        String price = "$27.00";
+
+        HomePage homePage = new HomePage();
+        SearchPage searchPage = new SearchPage();
+        ProductPage productPage = new ProductPage();
+
+        homePage.doSearch(quest);
+        assertTrue(searchPage.isSearchPage());
+        assertEquals(quest.toUpperCase(), searchPage.getTextSearchResult());
+
+        assertEquals(searchPage.getTextNameItem(), quest);
+
+       //searchPage.clickBtnAddToCart();
+
+       // assertEquals(productPage.itemName, quest);
     }
 
 }
