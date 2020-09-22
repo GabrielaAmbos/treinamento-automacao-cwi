@@ -2,7 +2,6 @@ package tests;
 
 import org.hamcrest.CoreMatchers;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import pageObjects.*;
 import utils.Browser;
 import utils.Utils;
@@ -70,6 +69,16 @@ public class SetupTest extends BaseTests{
        //searchPage.clickBtnAddToCart();
 
        // assertEquals(productPage.itemName, quest);
+    }
+
+    @Test
+    public void testAcessCategoryTShirts() {
+        HomePage homePage = new HomePage();
+        CategoryPage categoryPage = new CategoryPage();
+
+        homePage.clickCategoryTShirts();
+        assertTrue(categoryPage.isTShirts());
+
     }
 
 }

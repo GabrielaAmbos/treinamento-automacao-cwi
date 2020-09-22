@@ -13,4 +13,8 @@ public class HomePageElementMapper {
 
     @FindBy(name = "submit_search")
     public WebElement submit;
+
+    @FindBy(css = "#block_top_menu .sf-menu li:nth-child(3) a[title=T-shirts]")
+    public WebElement menuTshirts;
+
 }
