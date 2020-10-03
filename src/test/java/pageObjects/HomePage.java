@@ -1,6 +1,7 @@
 package pageObjects;
 
 import elementMapper.HomePageElementMapper;
+import io.qameta.allure.Step;
 import org.openqa.selenium.support.PageFactory;
 import utils.Browser;
 
@@ -10,6 +11,7 @@ public class HomePage extends HomePageElementMapper {
         PageFactory.initElements(Browser.getCurrentDriver(), this);
     }
 
+    @Step("Clicar no botao login")
     public void clickBtnLogin() {
         login.click();
     }

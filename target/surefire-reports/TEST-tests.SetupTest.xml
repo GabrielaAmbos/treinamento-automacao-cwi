@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="tests.SetupTest" time="94.503" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="tests.SetupTest" time="90.002" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="13"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -57,12 +57,12 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="57.0"/>
   </properties>
-  <testcase name="testLogin" classname="tests.SetupTest" time="20.346"/>
-  <testcase name="testPurchaseFlow" classname="tests.SetupTest" time="16.718"/>
-  <testcase name="testOpenBrowserAndLoadPage" classname="tests.SetupTest" time="6.452"/>
-  <testcase name="testAddProductToProductPage" classname="tests.SetupTest" time="10.145"/>
-  <testcase name="testAcessCategoryTShirts" classname="tests.SetupTest" time="8.005"/>
-  <testcase name="testAddProductToCartPage" classname="tests.SetupTest" time="14.803"/>
-  <testcase name="testAcessCategoryWomen" classname="tests.SetupTest" time="8.735"/>
-  <testcase name="testSearch" classname="tests.SetupTest" time="9.026"/>
+  <testcase name="testLogin" classname="tests.SetupTest" time="19.184"/>
+  <testcase name="testPurchaseFlow" classname="tests.SetupTest" time="17.305"/>
+  <testcase name="testOpenBrowserAndLoadPage" classname="tests.SetupTest" time="6.74"/>
+  <testcase name="testAddProductToProductPage" classname="tests.SetupTest" time="9.945"/>
+  <testcase name="testAcessCategoryTShirts" classname="tests.SetupTest" time="7.912"/>
+  <testcase name="testAddProductToCartPage" classname="tests.SetupTest" time="12.295"/>
+  <testcase name="testAcessCategoryWomen" classname="tests.SetupTest" time="8.231"/>
+  <testcase name="testSearch" classname="tests.SetupTest" time="8.162"/>
 </testsuite>

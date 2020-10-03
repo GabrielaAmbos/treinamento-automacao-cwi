@@ -1,5 +1,7 @@
 package tests;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.hamcrest.CoreMatchers;
 import org.junit.Test;
 import pageObjects.*;
@@ -8,15 +10,18 @@ import utils.Utils;
 
 import static org.junit.Assert.*;
 
+@Feature("Testes site de ecommerce")
 public class SetupTest extends BaseTests{
 
     @Test
+    @Story("Abrir o site")
     public void testOpenBrowserAndLoadPage() {
         assertTrue(Browser.getCurrentDriver().getCurrentUrl().contains(Utils.getBaseUrl()));
         System.out.println("Abriuuuu!!!");
     }
 
     @Test
+    @Story("Realizar o login")
     public void testLogin() {
         String email = "gabrielaambos15@gmail.com";
         String passwd = "senha123";
@@ -38,6 +43,7 @@ public class SetupTest extends BaseTests{
     }
 
     @Test
+    @Story("Pesquisar por um produto")
     public void testSearch() {
         String quest = "DRESS";
         String resultQts = "7";
@@ -72,6 +78,7 @@ public class SetupTest extends BaseTests{
     }*/
 
     @Test
+    @Story("Acessar categoria T-shirts")
     public void testAcessCategoryTShirts() {
         HomePage homePage = new HomePage();
         CategoryPage categoryPage = new CategoryPage();
@@ -82,6 +89,7 @@ public class SetupTest extends BaseTests{
     }
 
     @Test
+    @Story("Acessar categoria Women")
     public void testAcessCategoryWomen() {
         HomePage homePage = new HomePage();
         CategoryPage categoryPage = new CategoryPage();
@@ -91,6 +99,7 @@ public class SetupTest extends BaseTests{
     }
 
     @Test
+    @Story("Acessar categoria T-Shirts e visualizar pagina do produto")
     public void testAddProductToProductPage() {
         //Acessar a categoria T-Shirts
         testAcessCategoryTShirts();
@@ -107,6 +116,7 @@ public class SetupTest extends BaseTests{
     }
 
     @Test
+    @Story("Acessar categoria T-Shirts, visualizar pagina do produto e adicionar ao carrinho")
     public void testAddProductToCartPage() {
         //Acessa a página de produto
         testAddProductToProductPage();
@@ -125,6 +135,7 @@ public class SetupTest extends BaseTests{
     }
 
     @Test
+    @Story("Fluxo completo de compras logado no sistema")
     public void testPurchaseFlow() {
         //Logar no sistema
         testLogin();
