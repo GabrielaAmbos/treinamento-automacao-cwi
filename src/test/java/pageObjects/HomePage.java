@@ -35,4 +35,12 @@ public class HomePage extends HomePageElementMapper {
     public void clickCategoryTShirts() {
         menuTshirts.click();
     }
+
+    public void clickCategoryDresses() {
+        menuDresses.click();
+    }
+
+    public void clickCategoryWomen() {
+        menuWomen.click();
+    }
 }

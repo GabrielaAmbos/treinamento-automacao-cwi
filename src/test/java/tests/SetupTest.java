@@ -51,7 +51,7 @@ public class SetupTest extends BaseTests{
         assertThat(searchPage.getTextResultNumber(), CoreMatchers.containsString(resultQts));
     }
 
-    @Test
+  /*  @Test
     public void testSearchAndViewItem() {
         String quest = "Blouse";
         String price = "$27.00";
@@ -66,10 +66,10 @@ public class SetupTest extends BaseTests{
 
         assertEquals(searchPage.getTextNameItem(), quest);
 
-       //searchPage.clickBtnAddToCart();
+       searchPage.clickBtnAddToCart();
 
-       // assertEquals(productPage.itemName, quest);
-    }
+        assertEquals(productPage.getProductNamePDP(), quest);
+    }*/
 
     @Test
     public void testAcessCategoryTShirts() {
@@ -80,5 +80,78 @@ public class SetupTest extends BaseTests{
         assertTrue(categoryPage.isTShirts());
 
     }
+
+    @Test
+    public void testAcessCategoryWomen() {
+        HomePage homePage = new HomePage();
+        CategoryPage categoryPage = new CategoryPage();
+
+        homePage.clickCategoryWomen();
+        assertTrue(categoryPage.isWomen());
+    }
+
+    @Test
+    public void testAddProductToProductPage() {
+        //Acessar a categoria T-Shirts
+        testAcessCategoryTShirts();
+
+        CategoryPage categoryPage = new CategoryPage();
+        ProductPage productPage = new ProductPage();
+
+        String nameProductCategory = categoryPage.getProductNameCategory();
+
+        categoryPage.clickProductAddToProductPage();
+
+        assertTrue(productPage.getProductNamePDP().contains(nameProductCategory));
+
+    }
+
+    @Test
+    public void testAddProductToCartPage() {
+        //Acessa a página de produto
+        testAddProductToProductPage();
+
+        ProductPage productPage = new ProductPage();
+        CartPage cartPage = new CartPage();
+
+        String nameProductPDP = productPage.getProductNamePDP();
+
+        productPage.clickButtonAddToCart();
+
+        productPage.clickButtonModalProceedToCheckout();
+
+        assertTrue(cartPage.getNameProductCart().contains(nameProductPDP));
+
+    }
+
+    @Test
+    public void testPurchaseFlow() {
+        //Logar no sistema
+        testLogin();
+
+        //Acessar a categoria Women
+        testAcessCategoryWomen();
+
+        CategoryPage categoryPage = new CategoryPage();
+        ProductPage productPage = new ProductPage();
+
+        String nameProductCategory = categoryPage.getProductNameCategory();
+
+        categoryPage.clickProductAddToProductPage();
+
+        assertTrue(productPage.getProductNamePDP().contains(nameProductCategory));
+
+        CartPage cartPage = new CartPage();
+
+        String nameProductPDP = productPage.getProductNamePDP();
+
+        productPage.clickButtonAddToCart();
+
+        productPage.clickButtonModalProceedToCheckout();
+
+        assertTrue(cartPage.getNameProductCart().contains(nameProductPDP));
+
+    }
+
 
 }

@@ -68,9 +68,17 @@
     <orderEntry type="library" name="Maven: org.asynchttpclient:async-http-client:2.12.1" level="project" />
     <orderEntry type="library" name="Maven: org.asynchttpclient:async-http-client-netty-utils:2.12.1" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-codec-socks:4.1.48.Final" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.30" level="project" />
     <orderEntry type="library" name="Maven: com.sun.activation:javax.activation:1.2.0" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-safari-driver:4.0.0-alpha-6" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-support:4.0.0-alpha-6" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.qameta.allure:allure-junit4:2.13.5" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.qameta.allure:allure-java-commons:2.13.5" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.qameta.allure:allure-model:2.13.5" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.30" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.8" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.8" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.apache.tika:tika-core:1.20" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.jooq:joor-java-8:0.9.10" level="project" />
   </component>
 </module>

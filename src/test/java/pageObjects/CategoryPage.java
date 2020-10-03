@@ -18,4 +18,23 @@ public class CategoryPage extends CategoryPageElementMapper {
         return getTextCategoryName().contains("T-SHIRTS");
     }
 
+    public boolean isDresses() {
+        return getTextCategoryName().contains("DRESSES");
+    }
+
+    public boolean isWomen() {
+        return getTextCategoryName().contains("WOMEN");
+    }
+
+    public void clickProductAddToProductPage() {
+        BasePage.mouseOver(productNameCategory);
+        buttonMoreAddToProductPage.click();
+    }
+
+    public String getProductNameCategory() {
+        return productNameCategory.getText();
+    }
+
+
+
 }

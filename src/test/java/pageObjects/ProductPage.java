@@ -10,21 +10,22 @@ public class ProductPage extends ProductPageElementMapper {
         PageFactory.initElements(Browser.getCurrentDriver(), this);
     }
 
-    public String getTextProductName() {
-        return itemName.getText();
+    public String getProductNamePDP() {
+        return productNamePDP.getText();
     }
 
     public String getTextProductPrice() {
         return itemPrice.getText();
     }
 
-    public void isImageItem() {
-        itemImage.equals("image-block");
+    public void clickButtonAddToCart() {
+        buttonAddToCart.click();
     }
 
-    public void clickBtnAddToCart() {
-        addToCart.click();
+    public void clickButtonModalProceedToCheckout() {
+        buttonModalProceedToCheckout.click();
     }
+
 
 
 }

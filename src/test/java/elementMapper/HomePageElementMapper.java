@@ -17,4 +17,10 @@ public class HomePageElementMapper {
     @FindBy(css = "#block_top_menu .sf-menu li:nth-child(3) a[title=T-shirts]")
     public WebElement menuTshirts;
 
+    @FindBy(css = "#block_top_menu .sf-menu li:nth-child(1) a[title=Dresses]")
+    public WebElement menuDresses;
+
+    @FindBy(css = "#block_top_menu .sf-menu li:nth-child(1) a[title=Women]")
+    public WebElement menuWomen;
+
 }

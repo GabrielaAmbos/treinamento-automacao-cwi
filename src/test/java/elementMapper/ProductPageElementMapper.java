@@ -5,17 +5,17 @@ import org.openqa.selenium.support.FindBy;
 
 public class ProductPageElementMapper {
 
-    @FindBy(xpath = "//*[@itemprop='name']")
-    public WebElement itemName;
+    @FindBy(css = "h1[itemprop=name]")
+    public WebElement productNamePDP;
 
-    @FindBy(xpath = "//*[@itemprop='image']")
-    public WebElement itemImage;
-
-    @FindBy(xpath = "//*[@itemprop='price']")
+    @FindBy(xpath = "//*[@itemprop=price]")
     public WebElement itemPrice;
 
-    @FindBy(name = "Submit")
-    public WebElement addToCart;
+    @FindBy(css = "#add_to_cart > button")
+    public WebElement buttonAddToCart;
+
+    @FindBy(css = ".button-container a[title='Proceed to checkout")
+    public WebElement buttonModalProceedToCheckout;
 
 
 }
